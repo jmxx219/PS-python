@@ -1,6 +1,5 @@
 # 1로 만들기
 import sys
-sys.setrecursionlimit(10000000)
 
 
 def solve(n: int):  # top-down => 메모리 초과 발생
@@ -35,9 +34,8 @@ def solve3(n: int):
         return memo[n]
         # 나머지를 더해준 이유 짐작: 7의 경우 2, 3으로 나누어 지지 않으므로 -1를 무조건 해줘야한다.
         # 이 경우를 나머지로 더해주는 것으로 짐작된다.
-    m = 1 + min(solve3(n // 2) + n % 2, solve3(n // 3) + n % 3)
-    memo[n] = m
-    return m
+    memo[n] = 1 + min(solve3(n // 2) + n % 2, solve3(n // 3) + n % 3)
+    return memo[n]
 
 
 x = int(sys.stdin.readline())
