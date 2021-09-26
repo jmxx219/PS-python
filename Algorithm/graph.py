@@ -12,11 +12,11 @@ graph = { # 인접리스트로 구현한 그래프
 
 
 def recursive_dfs(v, discovered=[]) -> List[int]:
-        discovered.append(v)
-        for w in graph[v]:
-            if w not in discovered:
-                recursive_dfs(w, discovered)
-        return discovered
+    discovered.append(v)
+    for w in graph[v]:
+        if w not in discovered:
+            recursive_dfs(w, discovered)
+    return discovered
 
 
 def iterative_dfs(start_v) -> List[int]:
