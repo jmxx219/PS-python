@@ -1,7 +1,8 @@
 # k번째 수 - 이분 탐색
+# 참고: https://st-lab.tistory.com/281
 
 N = int(input())
-K = int(input())
+K = int(input()) # B[K] = x (x 보다 작거나 같은 원소의 갯수가 최소 K개)
 
 start, end = 1, K
 

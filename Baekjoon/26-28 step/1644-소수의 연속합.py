@@ -1,5 +1,6 @@
 # 소수의 연속합 - 투 포인터
 
+
 def countSum():
     res, start, end = 0, 0, 0
 
@@ -14,7 +15,7 @@ def countSum():
     return res
 
 
-def prime_list(n):
+def prime_list(n): # 에라토스테네스 체
     sieve = [True] * (n + 1)
 
     m = int(n ** 0.5)
@@ -28,4 +29,5 @@ def prime_list(n):
 
 N = int(input())
 nums = prime_list(N)
+# print(nums)
 print(countSum())
