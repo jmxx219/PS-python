@@ -61,5 +61,3 @@ for _ in range(9):
     board.append(list(map(int, stdin.readline().rstrip().split())))
 
 solve()
-
-
