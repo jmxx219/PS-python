@@ -10,7 +10,8 @@ graph = { # 인접리스트로 구현한 그래프
     7: [3],
 }
 
-
+# pop : 방문
+# discovered : 발견
 def recursive_dfs(v, discovered=[]) -> List[int]:
     discovered.append(v)
     for w in graph[v]:
@@ -18,7 +19,7 @@ def recursive_dfs(v, discovered=[]) -> List[int]:
             recursive_dfs(w, discovered)
     return discovered
 
-
+# 발견 후 바로 방문, 발견 방문 시점 같음
 def iterative_dfs(start_v) -> List[int]:
     discovered = []
     stack = [start_v]
@@ -31,6 +32,7 @@ def iterative_dfs(start_v) -> List[int]:
     return discovered
 
 
+# 방문 != 발견, 모두 발견한 후 방문
 def iterative_bfs(start_v) -> List[int]:
     discovered = [start_v]
     queue = [start_v]
